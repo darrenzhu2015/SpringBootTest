@@ -17,7 +17,7 @@ public class HolidayController {
 
     //add all the methods here based on holidayService
     @PostMapping(value = "/addOneHoliday", consumes = "application/json", produces = "application/json")
-    public HolidayDTO addOneHoliday(@RequestBody HolidayDTO holidayDTO) {
+    public @ResponseBody HolidayDTO addOneHoliday(@RequestBody HolidayDTO holidayDTO) {
         return holidayService.addOne(holidayDTO);
     }
 
